@@ -1,2 +1,2 @@
-var playlistPath='assets/music/';
-var defaultTheme="sunset";
+var playlistPath='https://fraigo.github.io/kar-midi-playlists/christmas/';
+var defaultTheme="christmas";
