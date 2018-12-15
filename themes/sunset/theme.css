@@ -1,0 +1,35 @@
+.sunset{
+	font-family:Cooper Black,Cambria,Georgia,Times,sans;
+}
+.sunset .app-title{
+	color: #fff;
+}
+.sunset > .karaoke {
+	background-image: url(background.jpg);
+	background-size:cover;
+	background-position: center center;
+	overflow:auto;
+	font-family:Cooper Black,Cambria,Georgia,Times,sans;
+	text-align:center;
+	background-size: cover;
+	color:#888;
+	text-shadow: 1px 1px 1px #ccc, -1px -1px 1px #ccc, -1px 1px 1px #ccc, 1px -1px 1px #ccc;
+}
+.sunset > .karaoke  .active{
+	color:red;
+}
+.sunset > .karaoke  .inactive{
+	color:#000;
+}
+.sunset > .karaoke .next {
+	color:#888;
+}
+.sunset > .karaoke .previous {
+	color:#888;
+}
+.sunset .footer {
+	color: #fff;
+	text-shadow: 2px 2px 1px #333, -2px -2px 1px #333, -2px 2px 1px #333, 2px -2px 1px #333;
+
+}
+

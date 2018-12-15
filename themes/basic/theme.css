@@ -1,0 +1,32 @@
+.sunset{
+	font-family:'Times New Roman', Times, serif;
+}
+.basic .app-title{
+	color: #fff;
+}
+.basic > .karaoke {
+	background-image: url(background01.jpg);
+	background-size:cover;
+	background-position: center center;
+	overflow:auto;
+	text-align:center;
+	text-shadow: 1px 1px 1px #333, -1px -1px 1px #333, -1px 1px 1px #333, 1px -1px 1px #333;
+}
+.basic > .karaoke  .active{
+	color:#F80;
+}
+.basic > .karaoke  .active.last{
+	color:#FF0;
+}
+.basic > .karaoke  .inactive{
+	color:#ddd;
+}
+.basic > .karaoke .next{
+	color:#888;
+}
+.basic > .karaoke .previous {
+	color:#888;
+}
+.basic .footer{
+	color: #fff;
+}

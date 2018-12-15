@@ -1,0 +1,184 @@
+body{
+    margin:0px;
+    padding:0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+pre {
+    max-height:200px;
+    overflow:auto;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.player{
+    width:100vw;
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.toolbar{
+    padding:0px;
+    margin-bottom:5px;
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    line-height: 40px;
+}
+.toolbar > div {
+    display: inline-block;
+}
+.app-title{
+    float:left;
+    font-size: 1.5em;
+    color: #fff;
+    text-shadow: 2px 2px 1px #444, -2px -2px 1px #444, -2px 2px 1px #444, 2px -2px 1px #444;
+}
+.app-title > img{
+    border-radius: 99%;
+    background-color: rgba(255,255,255,0.2);
+    padding: 3px;
+}
+.playback-toolbar{
+    float:right;
+}
+#karaoke{
+    text-align:center;
+    font-size:28pt;
+    padding:10px;
+    transition: linear .2s;
+}
+button, input[type="file"]{
+    height: 30px;
+    border-radius: 7px;
+    padding:4px;
+    background-color: rgba(255,255,255,0.5);
+    transition: linear .5s;
+}
+button:hover{
+    background-color: rgba(255,255,255,0.8);
+}
+input[type="file"]{
+    width: 100%;
+}
+.footer{
+    height:40px;
+    text-align: center;
+    position: fixed;
+    bottom:0px;
+    left: 0px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.2);
+    display: flex;
+    flex-direction: row;
+}
+.footer-text{
+    margin: 0px;
+    width: 100%;
+    margin: auto;
+}
+#themebutton{
+    margin:4px;
+}
+#songbutton{
+    margin:4px;
+}
+
+.dialog{
+    text-align: center;
+    position: fixed;
+    bottom:40px;
+    width: 100%;
+    transition: linear .4s;
+}
+.hidden{
+    opacity: 0;
+    z-index: -1;
+}
+.visible{
+    opacity: 1;
+    z-index: 9999;
+}
+.dialog .dialog-content{
+    margin: 20px 20px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 7px;
+    max-height: 80vh;
+    max-width:400px;
+    overflow: auto;
+}
+.dialog .option{
+    width:32%;
+    display: inline-block;
+    cursor: pointer;
+}
+.dialog .song{
+    cursor:pointer;
+    padding: 5px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 9px;
+    margin: 4px;
+    color: #666;
+}
+.dialog .song:hover{
+    color: #000;
+    background-color: rgba(255,255,255,0.8);
+}
+.dialog .option .karaoke{
+    font-size: 20px;
+    height:80px;
+    
+}
+.dialog .list-header{
+    position:sticky; 
+    top:-1px; 
+    z-index:9999; 
+    background-color: rgba(255,255,255,0.8);
+    padding:5px;
+    margin:0px;
+    border-radius: 9px 9px 0px 0px;
+}
+
+@media (min-width:1000px){
+    button{
+        font-size: 22px !important;
+        height: 35px;
+    }
+    #karaoke{
+        font-size: 50px !important;
+    }
+    .footer{
+        font-size: 26px !important;
+    }
+}
+
+@media (max-width:600px){
+    .toolbar{
+        margin:0px;
+    }
+    input[type="file"]{
+        width:90%;
+    }
+    .app-title{
+        width: 99%;
+    }
+    .playback-toolbar{
+        width:99%;
+    }
+    .toolbar > div {
+        display: block;
+        text-align: center;
+    }
+    .footer-text{
+        font-size: 12px;
+    }
+    #karaoke{
+        font-size: 30px !important;
+    }
+    .footer{
+        font-size: 16px !important;
+    }
+}
