@@ -79,6 +79,7 @@
 	</div>
 	<pre id=result style="display:none"></pre>
 	<script src="assets/js/player.js"></script>
+	<script src="config.js"></script>
 	<script>
 	window.onload=function(){
 		var pos= document.getElementById("position");
@@ -116,7 +117,7 @@
 		if (themes.indexOf(hash)>=0){
 			document.body.className=hash.substring(1);
 		}else{
-			document.body.className=themes[0].substring(1);
+			document.body.className=window.defaultTheme?defaultTheme:themes[0];
 		}
 		document.getElementById("themes").className="dialog hidden";
 	}
@@ -156,9 +157,10 @@
 				}
 			});
 	}
-	//var playlistPath='https://fraigo.github.io/kar-midi-playlists/christmas/';
-	var playlistPath='assets/music/';
-	loadPlaylist(playlistPath);
+	if (document.location.search.length>1){
+		playlistPath=document.location.search.substring(1);
+	}
+	loadPlaylist(window.playlistPath);
 	
 	</script>
 </body>
