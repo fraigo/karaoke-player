@@ -142,6 +142,10 @@ input[type="file"]{
     border-radius: 9px 9px 0px 0px;
 }
 
+.fb-share-button{
+    vertical-align: super;
+}
+
 @media (min-width:1000px){
     button{
         font-size: 22px !important;
