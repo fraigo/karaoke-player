@@ -17,9 +17,15 @@ A Web based Karaoke/MIDI player based on WEbMIDIAPI and WebAudio Soundfonts
   * Extensible support for CSS theming. Default with 3 theme presets.
 
 
+
 ## Online Demo
 
 * [Master Project](https://fraigo.github.io/karaoke-player/)
+
+![](screenshots/webkaraoke01.png)
+
+
 * [Christmas Version](https://web-karaoke.herokuapp.com/)
 
+![](screenshots/webkaraoke02.png)
 
