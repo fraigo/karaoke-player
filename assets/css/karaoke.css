@@ -86,6 +86,9 @@ input[type="file"]{
 #songbutton{
     margin:4px;
 }
+#footer button{
+    width: 170px;
+}
 
 .dialog{
     text-align: center;
@@ -146,6 +149,16 @@ input[type="file"]{
     vertical-align: super;
 }
 
+#position{
+    width: 18vw;
+    min-width: 130px;
+}
+#time{
+    padding:8px;
+    display: inline-block;
+    text-align: center;
+    width: 50px;
+}
 @media (min-width:1000px){
     button{
         font-size: 22px !important;
@@ -159,7 +172,7 @@ input[type="file"]{
     }
 }
 
-@media (max-width:600px){
+@media (max-width:767px){
     .toolbar{
         margin:0px;
     }
@@ -184,5 +197,14 @@ input[type="file"]{
     }
     .footer{
         font-size: 16px !important;
+    }
+    #position{
+        width: 30vw;
+    }
+}
+
+@media (max-width:479px){
+    #position{
+        width: 60vw;
     }
 }

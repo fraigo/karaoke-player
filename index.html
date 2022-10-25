@@ -52,7 +52,8 @@
 			<button type="button" onclick="player.play()">Play</button>
 			<button type="button" onclick="player.pause()">Pause</button>
 			<button type="button" onclick="player.stop()">Stop</button>
-			<input id="position" type="range" min="0" max="100" value="0">	
+			<input id="position" type="range" min="0" max="100" value="0" onchange="console.log(this.value)">	
+			<span id="time" >0:00</span>
 		</div>
 	</div>
 	
@@ -100,7 +101,7 @@
 	<div id="footer" class="footer">
 		<button id="themebutton" type="button" onclick="openDialog('themes')">Theme</button>
 		<div id="footer-text" class="footer-text">Karaoke Player by Francisco Igor</div>
-		<button id="songbutton" type="button" onclick="openDialog('songs')">Song</button>
+		<button id="songbutton" type="button" onclick="openDialog('songs')">Song List</button>
 	</div>
 	<pre id=result style="display:none"></pre>
 	<script src="assets/js/player.js"></script>
@@ -108,6 +109,14 @@
 	<script>
 	window.onload=function(){
 		var pos= document.getElementById("position");
+		var time1= document.getElementById("time");
+		pos.oninput=function(ev){
+			pos.changing = true
+			clearTimeout(pos.timeout)
+			pos.timeout = setTimeout(function(){
+				pos.changing = false
+			},300)
+		}
 		pos.onchange=function(ev){
 			console.log(pos.value);
 			player.setPosition(pos.value*1);
@@ -120,7 +129,11 @@
 			pos.setAttribute("max",song.duration)
 		}
 		player.ontick=function(song, position){
-			pos.value=position;
+			if (!pos.changing) pos.value=position;
+			var sec = Math.round(pos.value)%60
+			if (sec<10) sec = '0'+sec
+			var min = Math.floor(pos.value/60)
+			time1.innerText = min+':'+sec
 		}
 	}
 	window.onblur=function(){
