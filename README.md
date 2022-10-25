@@ -25,7 +25,7 @@ A Web based Karaoke/MIDI player based on WEbMIDIAPI and WebAudio Soundfonts
 ![](screenshots/webkaraoke01.png)
 
 
-* [Christmas Version](https://web-karaoke.herokuapp.com/)
+* [Christmas Version](https://fraigo.github.io/karaoke-player/?https://fraigo.github.io/kar-midi-playlists/christmas/#christmas)
 
 ![](screenshots/webkaraoke02.png)
 
