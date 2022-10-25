@@ -149,8 +149,11 @@ function stop(){
 }
 
 function playUrl(path,name){
-	var url=path+name+".kar";
+	var url=path+name;
 	var k=new KarFile();
+	var parts = name.split('.')
+	parts.pop()
+	name = parts.join('.')
 	k.readUrl(url,function(kar,buffer){
 		kar.fileName=name;
 		loadKar(kar);
